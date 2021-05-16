@@ -1,0 +1,11 @@
+input(<defpiedra_papel_tijera(jugada):
+    if (not(jugada in ['tijera', 'piedra', 'papel'])):
+        return('La jugada no es permitida, debe ser "tijera", "piedra" o "papel"')
+    computador=np.random.choice(['tijera', 'piedra', 'papel'])
+    if jugada==computador:
+        return('Empate en:',jugada)
+    else: 
+        if ((jugada=='piedra'and computador=='tijera') or (jugada=='tijera'and computador=='papel') or (jugada=='papel'and computador=='piedra')):
+            return('Jugador ganó:', jugada, 'vs', computador)
+        else:
+            return('Computadora ganó:', jugada, 'vs', computador)>
